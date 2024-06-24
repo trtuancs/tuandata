@@ -5,14 +5,17 @@ import sitemap from '@astrojs/sitemap';
 import { remarkReadingTime } from './src/utils/remarkReadingTime.ts'
 import remarkUnwrapImages from 'remark-unwrap-images';
 import rehypeExternalLinks from 'rehype-external-links';
-import expressiveCode from 'astro-expressive-code';
+import astroExpressiveCode from 'astro-expressive-code';
 import { expressiveCodeOptions } from './src/site.config';
 import icon from 'astro-icon';
 
 export default defineConfig({
   site: 'https://tuandata.com',
   integrations: [
-	expressiveCode(expressiveCodeOptions),
+  astroExpressiveCode({
+    themes: ['solarized-light']
+    // expressiveCodeOptions
+  }),
 	tailwind({applyBaseStyles: false}), 
 	sitemap(), 
 	mdx(), 
