@@ -5,13 +5,13 @@ export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
 	author: 'tuandata',
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
-	title: 'Tuân Data',
+	title: 'Tuan Data',
 	// Meta property used as the default description meta property
-	description: 'Nơi chia sẻ kiến thức Data Engineer dễ hiểu',
+	description: 'Sharing expert data engineering knowledge, tutorials, and best practices',
 	// HTML lang property, found in src/layouts/Base.astro L:18
-	lang: 'vi-VN',
+	lang: 'en-US',
 	// Meta property, found in src/components/BaseHead.astro L:42
-	ogLocale: 'vi_VN',
+	ogLocale: 'en_US',
 	// Date.prototype.toLocaleDateString() parameters, found in src/utils/date.ts.
 	date: {
 		locale: 'en-US',
