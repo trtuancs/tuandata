@@ -7,9 +7,10 @@ description: Hello everyone, today I would like to share about "Tmux Guide" . I 
 tags: [tmux, linux tool]
 draft: false
 # ogImage: /social-card.png
-# coverImage:
-#     src: "nodejs.png"
-#     alt: "Install Node.js v20.15.0 on Raspberry Pi Cover Image"
+# ogImage: /social-card.png
+coverImage:
+    src: "tmux.png"
+    alt: "Tmux Guide"
 #! TODO
 ---
 ## Introduction

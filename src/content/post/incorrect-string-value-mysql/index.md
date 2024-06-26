@@ -7,9 +7,9 @@ description: Hello everyone, today I would like to share about "How to fix error
 tags: [mysql, mysql error]
 draft: false
 # ogImage: /social-card.png
-# coverImage:
-#     src: "nodejs.png"
-#     alt: "Install Node.js v20.15.0 on Raspberry Pi Cover Image"
+coverImage:
+    src: "mysql.png"
+    alt: Fix error "Incorrect string value" in MySQL
 #! TODO
 ---
 ## Introduction

@@ -6,9 +6,9 @@ updatedDate: 25 Jun 2024
 description: Hello everyone, today I would like to share about "How to config SSH file for naming server". I hope my following guide will be helpful to everyone.
 tags: [ssh, linux, ssh key]
 # ogImage: /social-card.png
-# coverImage:
-#     src: "nodejs.png"
-#     alt: "Install Node.js v20.15.0 on Raspberry Pi Cover Image"
+coverImage:
+    src: "ssh.png"
+    alt: "Config SSH file"
 #! TODO
 ---
 ## Introduction

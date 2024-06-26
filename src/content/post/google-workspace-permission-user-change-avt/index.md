@@ -7,9 +7,9 @@ description: Hello everyone, today I would like to share about "Permission chang
 tags: [google workspace]
 draft: false
 # ogImage: /social-card.png
-# coverImage:
-#     src: "nodejs.png"
-#     alt: "Install Node.js v20.15.0 on Raspberry Pi Cover Image"
+coverImage:
+    src: "gs.png"
+    alt: "Permission for user change avatar in Google Workspace"
 #! TODO
 ---
 ## Introduction

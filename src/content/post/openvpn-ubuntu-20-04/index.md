@@ -7,9 +7,9 @@ description: Hello everyone, today I would like to share about "Working with Ope
 tags: [openvpn, vpn]
 draft: false
 # ogImage: /social-card.png
-# coverImage:
-#     src: "nodejs.png"
-#     alt: "Install Node.js v20.15.0 on Raspberry Pi Cover Image"
+coverImage:
+    src: "vpn.png"
+    alt: "Working with OpenVPN Server on Ubuntu Server 20.04"
 #! TODO
 ---
 ## Introduction
