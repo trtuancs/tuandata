@@ -2,9 +2,13 @@
 title: Delete website on Hostinger
 author: Tuan Data
 publishDate: 24 Jun 2024
+updatedDate: 24 Jun 2024
 description: Hello everyone, today I would like to share about "How to delete a website on Hostinger". I hope my following guide will be helpful to everyone.
 tags: [hostinger]
-ogImage: /social-card.png
+coverImage: 
+    src: "hostinger.png"
+    alt: "Delete website on Hostinger Cover Image"
+ogImage: hostinger.png
 #! TODO
 ---
 ## Introduction
