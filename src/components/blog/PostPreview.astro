@@ -10,9 +10,13 @@ type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
 	withDesc?: boolean
 }
 
+interface PostTagsProps {
+  postTags: string[];
+}
+
 const { as: Tag = 'div', post, withDesc = false } = Astro.props
 const postDate = post.data.updatedDate ?? post.data.publishDate
-const postTags = post.data.tags
+const postTags:PostTagsProps['postTags'] = post.data.tags
 
 const { class: className, title, tools, ...props } = Astro.props
 ---
@@ -51,7 +55,7 @@ const { class: className, title, tools, ...props } = Astro.props
 						<path d='M6 9h-.01' />
 					</svg>
 					{postTags.map((tag, i) => (
-						<span key={i}>
+						<span>
 							<a
 								aria-label={`View more blogs with the tag ${tag}`}
 								class="inline-block before:content-['#'] hover:underline hover:underline-offset-4 text-base"
