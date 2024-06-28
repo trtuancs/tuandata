@@ -5,7 +5,7 @@ import Card from '../components/Card.astro'
 // import ProjectCard from '../components/ProjectCard.astro'
 import Label from '../components/Label.astro'
 import SkillLayout from '../components/SkillLayout.astro'
-// import PostPreview from '@/components/blog/PostPreview.astro'
+import PostPreview from '@/components/blog/PostPreview.astro'
 
 import { Image } from 'astro:assets'
 import avt from '../assets/avt.png'
@@ -30,7 +30,7 @@ const allPosts = await getAllPosts()
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 ---
 
-<PageLayout meta={{ title: 'My CV' }}>
+<PageLayout meta={{ title: 'Home' }}>
 	<div class='flex w-full flex-col gap-y-10'>
 		<section class='flex flex-col items-center gap-y-7'>
 			<Image
@@ -64,7 +64,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 							></path></svg
 						>
 					</Label>
-					<Label title='contact@tuandata.com' class="text-lg">
+					<Label title='contact.tuandata@gmail.com' class="text-lg">
 						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' class='h-5 w-5' slot='icon'
 							><path
 								fill='currentColor'
@@ -104,25 +104,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			</p>
 		</Section>
 
-		<Section title='Skills'>
-			<SkillLayout title='API' skills={apis} />
-			
-			<SkillLayout title='Cloud service' skills={cloud} />
-			<SkillLayout title='Monitoring' skills={monitor} />
-			<SkillLayout title='Data warehouse' skills={data_warehouse} />
-			<SkillLayout title='Operating system' skills={operating_system} />
-			<SkillLayout title='BI tool' skills={bi} />
-			<SkillLayout title='Tool' skills={tools} />
-			<SkillLayout title='Programing language' skills={language} />
-			<SkillLayout title='DevOps' skills={devops} />
-			
-			<SkillLayout title='Database' skills={database} />
-			<SkillLayout title='ETL pipeline' skills={etl} />
-			<SkillLayout title='Soft skill' skills={soft} />
-			
-		</Section>
+		<!-- <h1>Hello</h1>
 
-		<!-- {
+		{
 			allPostsByDate.length > 0 && (
 				<Section title='Posts'>
 					<ul class='flex flex-col gap-y-2'>
@@ -136,119 +120,6 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			)
 		} -->
 
-		<Section title='Experience'>
-			<Card
-				heading='Senior Data Engineer'
-				subheading='Galaxy Play'
-				date='Feb 2023 - Present'
-				imagePath='/src/assets/about-astro.png'
-				altText=''
-				imageClass='h-12 w-auto md:-left-16'
-			>
-				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>
-						Building, optimizing, and maintaining a Data Platform for processing 20 million events 
-						and data from multiple data sources every day.
-					</li>
-				</ul>
-			</Card>
-			<Card
-				heading='Data Engineer'
-				subheading='Galaxy Play'
-				date='Jan 2021 - Feb 2023'
-				imagePath='/src/assets/about-astro.png'
-				altText=''
-				imageClass='h-12 w-auto md:-left-16'
-			>
-				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>Create and maintain data documentation.
-						<li>Implement the system pipelines (Data Warehouse, Data Mart).
-							<li>Design pipelines and architectures for data processing.
-								<li>Engineer data platforms to automate/facilitate data related processes.
-									<li>Recommend and implement ways to improve data reliability, efficiency and quality.
-										<li>Obtain and integrate data and information from various sources into Data Warehouse.
-											<li>Collaborate with relevant teams on opportunities to manage data and provide solutions for complex data.
-												<li>Write scripts and ingest raw data to build and maintain optimized data pipelines and ETL solutions as business support tools in
-													providing analysis.
-													<li>Maintain data integration processes into the data platform by building data pipelines and align with business representatives
-														and business information needs.
-														<li>Deliver functionality/data required for business and data analysts, data scientists and other business roles to advance the overall
-															analytic performance and strategy of company.
-															<li>Collaborate with Data Scientists to understand data requirements and create re-usable data assets to enable data scientists to
-																build and deploy machine learning models faster.
-																<li>Coordinate with partners to exchange or enrich data in alignment with business goals.
-																	<li>Optimize data pipeline and system performance.
-																	</li>
-																</li>
-															</li>
-														</li>
-													</li>
-												</li>
-											</li>
-										</li>
-									</li>
-								</li>
-							</li>
-						</li>
-					</li>
-				</ul>
-			</Card>
-			<Card
-				heading='Data Engineer'
-				subheading='WeVenture'
-				date='Aug 2019 - Apr 2020'
-				imagePath='/src/assets/about-astro.png'
-				altText=''
-				imageClass='h-12 w-auto md:-left-16'
-			>
-				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>Create and maintain the system pipeline and data documentation.
-						<li>Integrate massive datasets from multiple data sources for data modelling.
-							<li>Design, build-up, implement, optimize the data/ETL pipeline with the rest of the Data Engineer team.
-							</li>
-						</li>
-					</li>
-				</ul>
-			</Card>
-			<Card
-				heading='Research Engineer Intern'
-				subheading='WeVenture'
-				date='May 2019 - Aug 2019'
-				imagePath='/src/assets/about-astro.png'
-				altText=''
-				imageClass='h-12 w-auto md:-left-16'
-			>
-				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>Research time series forecasting models: LSTM, RNN, ARIMA.
-						<li>Research customer segmentation models: RFM, K-mean, DBSCAN, Dicision tree.
-						</li>
-					</li>
-				</ul>
-			</Card>
-		</Section>
-
-		<Section title='Education'>
-			<Card
-				heading='Computer Science'
-				subheading='Ho Chi Minh University of Technology (Bach Khoa HCM)'
-				date='2016 - 2020'
-				imagePath='/src/assets/about-astro.png'
-				altText=''
-				imageClass='h-12 w-auto md:-left-16'
-			/>
-		</Section>
-
-		<Section title='Certifications'>
-			<Card
-				as='a'
-				heading='Data Engineering, Big Data, and Machine Learning on GCP'
-				subheading='Coursera'
-				date='Issued: Aug 2023'
-				imagePath='/src/assets/about-astro.png'
-				altText='Credential ID: C628NSJSCVAR'
-				imageClass='h-11 w-auto md:-left-16'
-				href='https://www.coursera.org/account/accomplishments/specialization/certificate/C628NSJSCVAR'
-			/>
-		</Section>
+		
 	</div>
 </PageLayout>
