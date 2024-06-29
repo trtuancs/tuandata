@@ -69,6 +69,7 @@ const config = {
 			fontFamily: {
 				sans: [...fontFamily.sans],
 				satoshi: ['Satoshi', 'sans'],
+				posttitle: ['PostTitle', 'sans'],
 			}
 		}
 	}

@@ -4,15 +4,25 @@
 
 @font-face {
 	font-family: 'Satoshi';
-	src: url('/fonts/Satoshi-Variable.ttf');
+	/* src: url('/fonts/Satoshi-Variable.ttf'); */
+	src: url('/fonts/AlegreyaSans-Regular.ttf');
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: 'Satoshi';
-	src: url('/fonts/Satoshi-VariableItalic.ttf');
+	/* src: url('/fonts/Satoshi-VariableItalic.ttf'); */
+	src: url('/fonts/AlegreyaSans-Italic.ttf');
 	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'PostTitle';
+	/* src: url('/fonts/Satoshi-VariableItalic.ttf'); */
+	src: url('/fonts/AlegreyaSans-Medium.ttf');
+	font-style: normal;
 	font-display: swap;
 }
 

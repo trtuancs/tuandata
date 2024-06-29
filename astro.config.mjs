@@ -6,7 +6,7 @@ import { remarkReadingTime } from './src/utils/remarkReadingTime.ts'
 import remarkUnwrapImages from 'remark-unwrap-images';
 import rehypeExternalLinks from 'rehype-external-links';
 import astroExpressiveCode from 'astro-expressive-code';
-import { expressiveCodeOptions } from './src/site.config';
+// import { expressiveCodeOptions } from './src/site.config';
 import icon from 'astro-icon';
 
 export default defineConfig({

@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets'
+
+// Define the props interface
+interface BuyMeACoffeeProps {
+  qrCodeSrc: string;
+}
+
+// Define default values for props if necessary
+const { qrCodeSrc } = Astro.props as BuyMeACoffeeProps;
+---
+
+<div class="rounded-3xl border-2 flex flex-col items-center">
+    <p class="text-xl font-posttitle text-center mb-0 ">Buy Me a Coffee</p>
+    <Image
+      src={qrCodeSrc}
+      alt="profile photo"
+      width="150"
+      height="150"
+      class="w-55 h-65"
+      loading="eager"
+    />
+  </div>
