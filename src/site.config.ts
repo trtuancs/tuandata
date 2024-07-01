@@ -3,18 +3,18 @@ import type { AstroExpressiveCodeOptions } from 'astro-expressive-code'
 
 export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
-	author: 'tuandata',
+	author: 'Tuân Data',
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
-	title: 'Tuan Data',
+	title: 'Tuân Data',
 	// Meta property used as the default description meta property
-	description: 'Sharing expert data engineering knowledge, tutorials, and best practices',
+	description: 'Chia sẻ kiến thức Data Engineering, các bài hướng dẫn và ví dụ thực tế',
 	// HTML lang property, found in src/layouts/Base.astro L:18
-	lang: 'en-US',
+	lang: 'vi-VN',
 	// Meta property, found in src/components/BaseHead.astro L:42
-	ogLocale: 'en_US',
+	ogLocale: 'vi_VN',
 	// Date.prototype.toLocaleDateString() parameters, found in src/utils/date.ts.
 	date: {
-		locale: 'en-US',
+		locale: 'vi-VN',
 		options: {
 			day: 'numeric',
 			month: 'short',

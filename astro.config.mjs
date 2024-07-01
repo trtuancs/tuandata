@@ -6,8 +6,11 @@ import { remarkReadingTime } from './src/utils/remarkReadingTime.ts'
 import remarkUnwrapImages from 'remark-unwrap-images';
 import rehypeExternalLinks from 'rehype-external-links';
 import astroExpressiveCode from 'astro-expressive-code';
+import partytown from '@astrojs/partytown'
+
 // import { expressiveCodeOptions } from './src/site.config';
 import icon from 'astro-icon';
+
 
 export default defineConfig({
   site: 'https://tuandata.com',
@@ -20,6 +23,11 @@ export default defineConfig({
 	sitemap(), 
 	mdx(), 
 	icon(), 
+  partytown({
+    config: {
+      forward: ["dataLayer.push"],
+    },
+  }),
   ],
   markdown: {
     remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
