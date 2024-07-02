@@ -107,11 +107,13 @@ Trong phần này bạn có thể tham khảo các nguồn tài liệu sau nhé:
 ![This is image about database management system in data engineering](database.png)
 Kiến thức về technical thứ năm chúng ta sẽ cần tìm hiểu là Database Management System(DBMS).
 
-Trong phần 2, chúng ta đã tìm hiểu về SQL, nhưng đó chỉ tập trung đào sâu vào phần truy vấn dữ liệu, phục vụ cho việc xử lý dữ liệu bằng SQL hoặc lấy các adhoc report.
+Trong phần 2 `SQL`, chúng ta đã tìm hiểu về SQL, nhưng đó chỉ tập trung đào sâu vào phần truy vấn dữ liệu, phục vụ cho việc xử lý dữ liệu bằng SQL hoặc lấy các adhoc report.
 
 Trong phần này chúng ta sẽ chia ra làm 2 phần nhỏ nhé, đó là: `Phần 1: Kiến thức Database Management System cho người chỉ sử dụng` và `Phần 2: Kiến thức Database Management cho người setup (DataOps)`.
 
 Với phần 1, các bạn sẽ học các kiến thức về DBMS để giải quyết các câu hỏi như: `Thiết kế một DBMS như thế nào?`, `Quy trình thiết kế DBMS như thế nào?`, `Hoạt động của một DBMS như thế nào?`, `Lưu trữ Data trong một DB như thế nào cho hiệu quả?`, ... những câu hỏi này chỉ mục đích sử dụng một DBMS được build sẵn lên một cách tốt nhất, ngoài ra không động chạm gì phần dưới setup hệ thống DBMS cả.
+
+Đối với các bạn mới bắt đầu học về Data Engineering, mục tiêu chỉ đạt được level Fresher hoặc Junior, thì chỉ cần xem kỹ phần 1 này là đã đủ kiến thức để chiến rồi. Nếu các bạn thích mày mò, tìm hiểu sâu các kiến thức thì hãy tiếp đến phần 2 nhé, vì phần 2 này sẽ hơi `Ác` và `Chiến` đấy, vậy nên phải cẩn thận.
 
 Với phần 2, các bạn sẽ học các kiến thức về việc setup các DBMS một cách hiệu quả cũng như các kiến thức về System Design. Phần này phù hợp cho các bạn đã nắm kỹ phần 1 và muốn đào sâu vào bên dưới hệ thống của DBMS. Cũng như làm sao xây dựng một Data Warehouse On-Premise.
 
@@ -124,20 +126,71 @@ Trong phần này bạn có thể tham khảo các nguồn tài liệu sau nhé:
 - Sách [Designing Data-Intensive Applications](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321/ref=ci_mcx_mr_mp_m_d_sccl_2_2/144-2643349-2668312?pd_rd_w=jl7pT&content-id=amzn1.sym.904f4c18-630f-4c52-8bdf-78921242d9bd:amzn1.symc.27c848cf-47ab-487b-bd07-91bc659e0119&pf_rd_p=904f4c18-630f-4c52-8bdf-78921242d9bd&pf_rd_r=T5NM3R82XDZC06189DFD&pd_rd_wg=LVhXF&pd_rd_r=8959001b-311f-474a-883d-e664a4652f9a&pd_rd_i=1449373321&psc=1): Đây là một quyển sách hay nói về các khía cạnh trong System Design.
 - [Tài liệu PostgreSQL Database](https://www.postgresql.org/docs/16/index.html): Đây là nguồn tài liệu chính thống từ PostgreSQL Database.
 - [Tài liệu Clickhouse Database](https://clickhouse.com/docs/en/intro): Đây là nguồn tài liệu chính thống từ Clickhouse Database.
-- `Module 6.1 Database Management System cơ bản` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này học viên sẽ được học về 
+- `Module 6.1: Database Management System cơ bản` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này học viên sẽ được học về các kiến thức về thiết kế Database cũng như các câu lệnh SQL để quản trị một Database hiệu quả. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
+- `Module 6.2: Thiết kế và xây dựng PostgreSQL Database cluster mạnh mẽ` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này học viên sẽ được học về các vấn đề trong System Design từ đó áp dụng trong việc thiết kế, xây dựng và tối ưu một cụm PostgreSQL Database phục vụ cho mục đích làm Data Warehouse hiệu quả. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
+- `Module 6.3: Clickhouse cho Data Engineer` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này học viên sẽ được học về cách sử dụng Clickhouse, mindset để thực thi các câu truy vấn trong Clickhouse hiệu quả, các vấn đề trong System Design từ đó áp dụng trong việc thiết kế, xây dựng và tối ưu một cụm Clickhouse Database phục vụ cho mục đích làm Data Warehouse hiệu quả. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
+- Đối với các bạn muốn đào sâu hơn nữa, thì hãy nghiên cứu sâu những Database sau nhé: `Apache Druid`, `Apache Pinot`, `YugabyteDB`, `Apache Doris`, `StarRocks`, `DuckDB`, `Apache Hudi`, `Apache Iceberg`, `Delta Lake`.  Biết nhiều loại sẽ giúp bạn có giải pháp tốt hơn để giải quyết một vấn đề, bởi vì mỗi loại đều có những ưu và nhược điểm riêng. Không có cái nào là tốt nhất cả, chỉ có giải pháp phù hợp nhất.
 
 
 ## 7. Data Warehouse Concept
+![This is image about DWH](dwh.gif)
+Kiến thức về technical thứ sáu chúng ta sẽ cần tìm hiểu là các kiến thức về Data Warehouse.
+
+Trong phần sáu này, chúng ta sẽ cùng nhau tìm hiểu về các khái niệm cũng như kiến thức về Data Warehouse như: ETL, ELT, OLAP, OLTP, Metadata, Dimension model, Start Schema, Snowflake Schema, Slowly Changing Dimension, các concept về Data Model, Logical Data Model, Phisical Data Model, ...
+
+Mục tiêu của phần này giúp cho các bạn nắm được tại sao lại cần Data Warehouse; thiết kế một Data Warehouse như thế nào; các khái niệm khái như Data Lake, Data Mart, Data Lakehouse, Data Mesh là sao; tất tần tật các khái niệm liên quan đến việc lưu trữ Big Data trong một Data Platform.
+
+### Nguồn tài liệu
+Trong phần này bạn có thể tham khảo các nguồn tài liệu sau nhé:
+- Sách [The Data Warehouse Toolkit](https://www.amazon.com/Data-Warehouse-Toolkit-Definitive-Dimensional/dp/1118530802/ref=sims_dp_d_dex_popular_subs_t3_v3_d_sccl_2_4/144-2643349-2668312?pd_rd_w=jpZAU&content-id=amzn1.sym.f397bf17-0109-424d-bb2c-23c632716f37&pf_rd_p=f397bf17-0109-424d-bb2c-23c632716f37&pf_rd_r=3NV7PM5J8QHT1W7EG2KK&pd_rd_wg=gqeGL&pd_rd_r=ba20de1a-46bc-407e-8d27-cb378576c4b4&pd_rd_i=1118530802&psc=1): Đây là một quyển sách đầy đủ nói về các khái niệm trong Data Warehouse mà các bạn nên tham khảo.
+- `Module 7: Data Warehouse Concept` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này học viên sẽ được học các khái niệm liên quan đến Data Warehouse cũng như các cách tổ chức dữ liệu lưu trữ hợp lý bên trong Data Warehouse. Sau khi đã nắm chắc các kiến thức này, học viên sẽ được mở rộng sang các khái niệm liên quan như Data Mart, Data Lake, Data Lakehouse, Data Mesh. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
 
 
 ## 8. Big Data Framework
+![This is image about Big Data Framework](big_data.png)
+Kiến thức về technical thứ bảy chúng ta sẽ cần tìm hiểu là kiến thức liên quan đến các công cụ sử dụng để xử lý Big Data cũng như tương tác với Big Data.
+
+Các công cụ phổ biến thì Tuân cũng đã show trong hình mô tả rồi nhé mọi người. Lưu ý rằng tuỳ mục tiêu của các bạn mà nên sắp xếp học hợp lý nhé!
+
+Đối với những bạn mục tiêu level Fresher/ Junior, ưu tiên học Airflow đầu tiên, rồi tiếp đến là Kafka, rồi Spark, rồi DBT nhé.
+
+Nếu các bạn đã quen với các công cụ đã kể ở trên, muồn bổ sung kiến thức thêm thì các bạn có thể xem tiếp các công cụ còn lại nhé!
+
+### Nguồn tài liệu
+Trong phần này bạn có thể tham khảo các nguồn tài liệu sau nhé:
+- Phần lớn các công cụ được Tuân liệt kê ở trên sẽ có Document cụ thể cả, các bạn có thể vào trang Document của từng công cụ mà xem chi tiết nhé.
+- `Module 8.1: Airflow cho Data Engineer` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này học viên sẽ được học cách setup và config Airflow trên môi trường Production cũng như các kiến thức sử dụng Airflow để giải quyết các bài toán thực tế Data Engineering. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
+- `Module 8.2: Kafka cho Data Engineer` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này học viên sẽ được học cách setup và config Kafka trên môi trường Production cũng như các kiến thức liên quan đến việc sử dụng Kafka để giải quyết các bài toán thực tế Data Engineering. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
+- `Module 8.3: Spark cho Data Engineer` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này học viên sẽ được học cách setup và config Spark trên môi trường Production cũng như các kiến thức liên quan đến việc sử dụng Spark để giải quyết các bài toán thực tế Data Engineering. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
+- `Module 8.4: DBT cho Data Engineer` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này học viên sẽ được học cách setup và config DBT trên môi trường Production cũng như các kiến thức liên quan đến việc sử dụng DBT để giải quyết các bài toán thực tế Data Engineering. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
+- `Module 8.5: Flink cho Data Engineer` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này học viên sẽ được học cách setup và config Flink trên môi trường Production cũng như các kiến thức liên quan đến việc sử dụng Flink để giải quyết các bài toán thực tế Data Engineering. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
 
 
 ## 9. NoSQL Database
+![This is image about NoSQL](nosql.png)
+Trong phần này chúng ta sẽ đi tìm hiểu về NoSQL Database nhé mọi người.
+
+Đối với những bạn mục tiêu level Fresher/ Junior thì không cần đào sâu vào các Database này đâu nhé. Chỉ cần hiểu được thế nào là NoSQL cũng như sự khác biệt với các Relational Database khác; kèm với đó là nó giải quyết bài toán gì.
+
+Nếu bạn muốn đào sâu vào phần này, thì Tuân có reccommend cho bạn 2 NoSQL phổ biến với Data Engineer đó là Cassandra và MongoDB nhé.
+
+### Nguồn tài liệu
+Trong phần này bạn có thể tham khảo các nguồn tài liệu sau nhé:
+- [Giới thiệu về NoSQL Database](https://www.ibm.com/topics/nosql-databases): Bạn có thể tham khảo tài liệu từ IBM để nắm các kiến thức cơ bản của NoSQL nhé.
+- [Tài liệu MongoDB](https://www.mongodb.com/docs/manual/): Đây là document của MongoDB, nếu như các bạn muốn tìm hiểu sâu về MongoDB nhé.
+- [Tài liệu Cassandra](https://cassandra.apache.org/_/resources.html): Đây là tổng hợp các tài liệu liên quan đến việc tìm hiểu về Cassandra nếu như các bạn muốn tìm hiểu sâu về Cassandra nhé.
+- `Module 9: NoSQL Database cho Data Engineer` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này học viên sẽ được học các kiến thức liên quan đến NoSQL Database cũng như các công việc thực tế của Data Engineer liên quan đến NoSQL Database. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
 
 
 ## 10. Cloud Services
+![This is image about Cloud Service Provider](cloud.png)
+Trong phần này, chúng ta sẽ cùng tìm hiểu về các Cloud Service mà các Data Engineer thường sử dụng.
 
+Như trong hình mô tả, hiện tại trên thị trường sẽ có 3 Cloud Provider chính, đó là AWS, GCP và Azure.
+
+Nếu bạn là người mới tìm hiểu, thì cứ chọn một provider bất kỳ trong 3 cloud trên, rồi tiến hành học các service phục vụ Data Engineering như sau:
+
+- AWS: 
 
 ## 11. DataOps
 
