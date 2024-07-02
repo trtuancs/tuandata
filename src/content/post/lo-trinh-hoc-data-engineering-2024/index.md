@@ -2,7 +2,7 @@
 title: Lộ trình học Data Engineering 2024
 author: Tuan Data
 publishDate: 28 Jun 2024
-updatedDate: 1 Jul 2024
+updatedDate: 3 Jul 2024
 description: Chào mọi người, trong bài viết này Tuân sẽ chia sẻ đến mọi người về "Lộ trình học Data Engineering 2024", Tuân hi vọng bài viết này sẽ hữu ích với mọi người.
 tags: [data engineering]
 # draft: true
@@ -186,11 +186,17 @@ Trong phần này bạn có thể tham khảo các nguồn tài liệu sau nhé:
 ![This is image about Cloud Service Provider](cloud.png)
 Trong phần này, chúng ta sẽ cùng tìm hiểu về các Cloud Service mà các Data Engineer thường sử dụng.
 
-Như trong hình mô tả, hiện tại trên thị trường sẽ có 3 Cloud Provider chính, đó là AWS, GCP và Azure.
+Như trong hình mô tả, hiện tại trên thị trường có 3 Cloud Provider chính, đó là AWS, GCP và Azure.
 
-Nếu bạn là người mới tìm hiểu, thì cứ chọn một provider bất kỳ trong 3 cloud trên, rồi tiến hành học các service phục vụ Data Engineering như sau:
+Nếu bạn là người mới tìm hiểu hoặc đặt mục tiêu cho mình ở mức level Fresher/ Junior, thì cứ chọn một provider bất kỳ trong 3 cloud trên, rồi tiến hành học các service phục vụ Data Engineering như sau:
 
-- AWS: 
+- AWS:
+    - Storage: Amazon S3, Amazon EBS, Amazon EFS, AWS Backup.
+    - Database: Amazon DynamoDB, Amazon RDS, Amazon DocumentDB, Amazon MemoryDB for Redis, Amazon Keyspaces for Cassandra, Amazon Neptune, Amazon Timestream, Amazon Redshift.
+    - Migration and Transfer: AWS Application Discovery Service, AWS Application Migration Service, AWS Data Migration Service, AWS DataSync, AWS Snow Family, AWS Transfer Family.
+    - Compute: AWS EC2, AWS Lambda, AWS SAM(Serverless Application Model), AWS Batch.
+    - Container: Amazon ECS, Amazon ECR, Amazon EKS.
+    - Analysis: AWS Glue, AWS Lake Formation, Amazon Atherna
 
 ## 11. DataOps
 
