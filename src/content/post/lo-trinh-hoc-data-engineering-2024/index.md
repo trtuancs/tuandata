@@ -225,16 +225,44 @@ Trong phần này bạn có thể tham khảo các nguồn tài liệu sau nhé:
 
 
 ## 11. DataOps
-![Hình minh hoạ cho DataOps](dataops.webp)
+![Hình minh hoạ cho DataOps](do.png)
+Trong phần này, chúng ta sẽ cùng nhau tìm hiểu về các kiến thức liên quan đến việc deploy, vận hành cũng như monitor các service trong một Data Platform. Nhằm đảm bảo 
+Data Platform được hoạt động tốt. Các công việc này được gọi là DataOps hay Data Operations.
 
+Đối với một team Data lớn (số lượng member trong team nhiều, quản lý và phát triển nhiều project data phức tạp), thì sẽ có hẵn những bạn đảm nhiệm vị trí DataOps Engineer. Công việc của các bạn DataOps Engineer này sẽ hỗ trợ build cũng như optimize các service, nhằm đảm bảo tạo một môi trường tốt nhất cho các bạn Data Engineer phát huy sở trường của mình trong việc thu thập, xử lý, lưu trữ cũng như hỗ trợ tốt cho các bạn Data Analyst, Data Scientist khai thác dữ liệu một cách tốt nhất.
+
+Đối với các team không có vị trí DataOps Engineer chính thức, thì những công việc này sẽ được san sẻ giữa các bạn trong team DevOps và các bạn Data Engineer trong team Data. 
+
+Trong phần này chúng ta sẽ không đi sâu vào các kiến thức về DataOps nhé, chúng ta chỉ tìm hiểu những kiến thức về DataOps cần thiết đối với một Data Engineer, đủ để Data Engineer dùng thôi nhé.
+
+Đối với các bạn mục tiêu level Fresher/ Junior thì chưa cần thiết phải xem phần này nhé!
+
+Các công cụ trong phần này chúng ta sẽ học gồm như sau:
+
+- Docker
+- Kubernetes
+- Jenkins
+- Terraform
+
+### Nguồn tài liệu
+Trong phần này bạn có thể tham khảo các nguồn tài liệu sau nhé:
+- [Sách Docker Deep Dive](https://learning.oreilly.com/library/view/docker-deep-dive/9781835081709/): Đây là một quyển sách đề cập đầy đủ các kiến thức về Docker.
+- [Sách The Book of Kubernetes](https://learning.oreilly.com/library/view/the-book-of/9781098141394/): Một quyển sách nói về Container và Kubernetes chi tiết cho người mới bắt đầu.
+- [Tài liệu Jenkins](https://www.jenkins.io/doc/book/getting-started/): Tại đây các bạn có thể tìm hiểu về Jenkins từ cơ bản nhé.
+- [Tài liệu Terraform](https://developer.hashicorp.com/terraform?product_intent=terraform): Trang tài liệu của Terraform.
+- `Module 11.1: Docker cho Data Engineer` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này các bạn sẽ được học về các kiến thức về Docker, Docker container, Docker compose và các vấn đề thực tế liên quan đến Data Engineering. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
+- `Module 11.2: Kubernetes cho Data Engineer` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này các bạn sẽ được học về các kiến thức về việc sử dụng Kubernetes trong việc deploy, monitor cũng như quản lý các service liên quan đến Data Engineering. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
+- `Module 11.3: Jenkins cho Data Engineer` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này các bạn sẽ được học về các kiến thức về việc sử dụng Jenkins trong công việc liên quan đến Data Engineering. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
 
 
 ## 12. Data Visualization
 
 
+
 ## 13. Scalar
 
 
-## Conclusion
+
+## Kết
 I hope this explanation was clear and easy to understand for you to follow through the process.
 
