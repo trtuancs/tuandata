@@ -184,21 +184,49 @@ Trong phần này bạn có thể tham khảo các nguồn tài liệu sau nhé:
 
 ## 10. Cloud Services
 ![This is image about Cloud Service Provider](cloud.png)
-Trong phần này, chúng ta sẽ cùng tìm hiểu về các Cloud Service mà các Data Engineer thường sử dụng.
+Trong phần này, chúng ta sẽ cùng tìm hiểu về các Cloud Service được cung cấp bởi các Cloud Provider phục vụ cho Data Engineering.
 
 Như trong hình mô tả, hiện tại trên thị trường có 3 Cloud Provider chính, đó là AWS, GCP và Azure.
 
-Nếu bạn là người mới tìm hiểu hoặc đặt mục tiêu cho mình ở mức level Fresher/ Junior, thì cứ chọn một provider bất kỳ trong 3 cloud trên, rồi tiến hành học các service phục vụ Data Engineering như sau:
+Nếu bạn là người mới tìm hiểu hoặc đặt mục tiêu cho mình ở mức level Fresher/ Junior, thì cứ chọn một provider bất kỳ trong 3 cloud trên, rồi tiến hành học các service thường sử dụng cho Data Engineering như sau:
 
-- AWS:
-    - Storage: Amazon S3, Amazon EBS, Amazon EFS, AWS Backup.
-    - Database: Amazon DynamoDB, Amazon RDS, Amazon DocumentDB, Amazon MemoryDB for Redis, Amazon Keyspaces for Cassandra, Amazon Neptune, Amazon Timestream, Amazon Redshift.
-    - Migration and Transfer: AWS Application Discovery Service, AWS Application Migration Service, AWS Data Migration Service, AWS DataSync, AWS Snow Family, AWS Transfer Family.
-    - Compute: AWS EC2, AWS Lambda, AWS SAM(Serverless Application Model), AWS Batch.
-    - Container: Amazon ECS, Amazon ECR, Amazon EKS.
-    - Analysis: AWS Glue, AWS Lake Formation, Amazon Atherna
+- AWS 
+    - Amazon S3
+    - Amazon EC2
+    - AWS Glue
+    - Amazon RedShift
+    - Amazon EMR
+    - AWS LambdaAWS Lambda
+
+- GCP
+    - Google Cloud Data Fusion
+    - Google Compute Engine
+    - Google BigQuery
+    - Google Cloud Dataproc
+    - Google Cloud Storage
+    - Google Cloud SQL
+
+- Azure:
+    - Azure Data Factory
+    - Azure Virtual Machine
+    - Azure Synapse
+    - Azure Databricks
+    - Azure Blob Storage
+    - Azure Data Lake Storage Gen2
+    - Azure SQL Database
+
+### Nguồn tài liệu
+Trong phần này bạn có thể tham khảo các nguồn tài liệu sau nhé:
+- [Tài liệu các service AWS](https://docs.aws.amazon.com/): Đây là trang hướng dẫn cũng như các thông tin về các service hiện có của AWS. Bạn cần tìm hiểu service nào thì cứ search rồi đọc nhé.
+- [Tài liệu các service GCP](https://cloud.google.com/docs/): Đây là trang hướng dẫn cũng như các thông tin về các service hiện có của GCP.
+- [Tài liệu các service Azure](https://learn.microsoft.com/en-us/azure/?product=popular): Đây là trang hướng dẫn cũng như các thông tin về các service hiện có của Azure.
+- `Module 10.1: AWS cho Data Engineer` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này các bạn sẽ được học về các service trên nền tảng cloud AWS phục vụ cho các công việc liên quan Data Engineering. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
+- `Module 10.2: GCP cho Data Engineer` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này các bạn sẽ được học về các service trên nền tảng cloud GCP phục vụ cho các công việc liên quan Data Engineering. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
+
 
 ## 11. DataOps
+![Hình minh hoạ cho DataOps](dataops.webp)
+
 
 
 ## 12. Data Visualization
