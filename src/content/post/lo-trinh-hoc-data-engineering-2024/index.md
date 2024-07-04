@@ -270,12 +270,20 @@ Các bạn sẽ thấy khó hiểu tại sao Data Engineer lại phải biết c
 Lưu ý, Đối với các bạn mục tiêu level Fresher/ Junior thì chưa cần xem phần này.
 
 ### Nguồn tài liệu
-- [Khoá học Tableau trên Youtube channel](https://www.youtube.com/watch?v=K3pXnbniUcM&ab_channel=DatawithBaraa): Đây là một khoá học về Tableau miễn phí trên Youtube, tuy miễn phí những chất lượng kiến thức thì rất đầy đủ.
-- [Tutorial PowerBI trên Youtube channel](https://www.youtube.com/watch?v=g0m5sEHPU-s&list=PLUaB-1hjhk8HqnmK0gQhfmIdCbxwoAoys&ab_channel=AlexTheAnalyst): Đây là một chuỗi video tutorial hướng dẫn về sử dụng PowerBI cho người mới trên nền tảng Youtube.
+- [Khoá học Tableau trên Youtube](https://www.youtube.com/watch?v=K3pXnbniUcM&ab_channel=DatawithBaraa): Đây là một khoá học về Tableau miễn phí trên Youtube, tuy miễn phí những chất lượng kiến thức thì rất đầy đủ.
+- [Tutorial PowerBI trên Youtube](https://www.youtube.com/watch?v=g0m5sEHPU-s&list=PLUaB-1hjhk8HqnmK0gQhfmIdCbxwoAoys&ab_channel=AlexTheAnalyst): Đây là một chuỗi video tutorial hướng dẫn về sử dụng PowerBI cho người mới trên nền tảng Youtube.
 - [Tài liệu Superset](https://superset.apache.org/docs/intro): Đây là trang tài liệu Superset, nơi bạn có thể tìm hiểu tất tần tật về công cụ này.
+- `Module 12.1: Tableau cho Data Engineer` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này các bạn sẽ được học các kiến thức cơ bản của Tableau, các vấn đề liên quan đến Tableau trong công việc hằng ngày, cách sử dụng Tableau cũng như xây dựng các Dashboard đơn giản bằng Tableau. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
+- `Module 12.2: Superset cho Data Engineer` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này các bạn sẽ được học các kiến thức cơ bản của Superset, các vấn đề liên quan đến Superset trong công việc hằng ngày, cách sử dụng Superset cũng như xây dựng các Dashboard đơn giản bằng Superset và customize Superset. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
 
+## 13. Scala
+![Hình minh hoạ Scala](scl.png)
+Trong phần này chúng ta sẽ cùng nhau tìm hiểu về ngôn ngữ lập trình Scala.
 
-## 13. Scalar
+Lưu ý, những bạn đặt mục tiêu Fresher/ Junior thì không cần phải xem phần này.
+
+Có lẽ các bạn sẽ thắc mắc: "tại sao đã có Python làm ngon lành rồi, lại đi học thêm ngôn ngữ lập trình Scala này làm gì nữa?".
+
 
 
 
