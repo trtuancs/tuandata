@@ -252,11 +252,27 @@ Trong phần này bạn có thể tham khảo các nguồn tài liệu sau nhé:
 - [Tài liệu Terraform](https://developer.hashicorp.com/terraform?product_intent=terraform): Trang tài liệu của Terraform.
 - `Module 11.1: Docker cho Data Engineer` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này các bạn sẽ được học về các kiến thức về Docker, Docker container, Docker compose và các vấn đề thực tế liên quan đến Data Engineering. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
 - `Module 11.2: Kubernetes cho Data Engineer` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này các bạn sẽ được học về các kiến thức về việc sử dụng Kubernetes trong việc deploy, monitor cũng như quản lý các service liên quan đến Data Engineering. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
-- `Module 11.3: Jenkins cho Data Engineer` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này các bạn sẽ được học về các kiến thức về việc sử dụng Jenkins trong công việc liên quan đến Data Engineering. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
-
+- `Module 11.3: Jenkins cho Data Engineer` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này các bạn sẽ được học về các kiến thức về việc sử dụng Jenkins trong việc CI/CD các project liên quan đến Data Engineering. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
+- `Module 11.4: Terraform cho Data Engineer` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này các bạn sẽ được học về các kiến thức về việc sử dụng Terraform để triển khai infra liên qua đến các service Data Engineering trên các cloud provider bằng script. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
 
 ## 12. Data Visualization
+![Hình ảnh minh hoạ cho phần Visualization](bi.png)
+Trong phần này chúng ta sẽ cùng nhau tìm hiểu về các công cụ được sử dụng phổ biến để visualize data.
 
+Hiện tại, trên thị trường sẽ có 3 công cụ phổ biến như sau: Tableau, PowerBI và Superset. Trong đó Tableau và PowerBI là 2 công cụ trả phí, còn Superset là công cụ được Opensource nhé.
+
+Nếu là người mới thì các bạn nên chọn học cũng như tìm hiểu Tableau hoặc PowerBI trước nhé, bởi vì 2 thằng này được sử dụng phổ biến hơn Superset. Sau đó có thời gian thì các bạn có thể xem thêm về Superset.
+
+Mục tiêu phần này, chúng ta sẽ tìm hiểu cách sử dụng các công cụ trên ở level cơ bản thôi nhé, làm sao biết sử dụng nó để vẽ được những chart phù hợp cũng như biết cách tạo các Dashboard, cũng như cài các driver liên quan để phục vụ việc connect đến các data source.
+
+Các bạn sẽ thấy khó hiểu tại sao Data Engineer lại phải biết các công cụ Visualize này đúng không? Khi bạn biết các kiến thức cơ bản về các công cụ Visualize này sẽ giúp bạn giao tiếp với các bạn Data Analyst dễ dàng hơn, cũng như sẽ biết được những khó khăn của các bạn Data Analyst. Từ đó có thể phục vụ các bạn Data Analyst tốt hơn bằng những việc đơn giản như thiết kế các Table hoặc các View phù hợp hơn.
+
+Lưu ý, Đối với các bạn mục tiêu level Fresher/ Junior thì chưa cần xem phần này.
+
+### Nguồn tài liệu
+- [Khoá học Tableau trên Youtube channel](https://www.youtube.com/watch?v=K3pXnbniUcM&ab_channel=DatawithBaraa): Đây là một khoá học về Tableau miễn phí trên Youtube, tuy miễn phí những chất lượng kiến thức thì rất đầy đủ.
+- [Tutorial PowerBI trên Youtube channel](https://www.youtube.com/watch?v=g0m5sEHPU-s&list=PLUaB-1hjhk8HqnmK0gQhfmIdCbxwoAoys&ab_channel=AlexTheAnalyst): Đây là một chuỗi video tutorial hướng dẫn về sử dụng PowerBI cho người mới trên nền tảng Youtube.
+- [Tài liệu Superset](https://superset.apache.org/docs/intro): Đây là trang tài liệu Superset, nơi bạn có thể tìm hiểu tất tần tật về công cụ này.
 
 
 ## 13. Scalar
