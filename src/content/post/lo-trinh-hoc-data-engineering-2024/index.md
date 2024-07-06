@@ -280,13 +280,30 @@ Lưu ý, Đối với các bạn mục tiêu level Fresher/ Junior thì chưa c�
 ![Hình minh hoạ Scala](scl.png)
 Trong phần này chúng ta sẽ cùng nhau tìm hiểu về ngôn ngữ lập trình Scala.
 
-Lưu ý, những bạn đặt mục tiêu Fresher/ Junior thì không cần phải xem phần này.
+Lưu ý, những bạn đặt mục tiêu Fresher/ Junior thì không cần phải xem phần này. Nhưng nếu các bạn thích tìm hiểu cũng như có thời gian thì cứ học để biết thêm nhé, vì biết thêm không bao giờ là thừa cả.
 
 Có lẽ các bạn sẽ thắc mắc: "tại sao đã có Python làm ngon lành rồi, lại đi học thêm ngôn ngữ lập trình Scala này làm gì nữa?".
 
+Trước đây Tuân cũng có những thắc mắc như vậy. Để trả lời được câu hỏi này, Tuân đã tìm hiểu sâu về 2 ngôn ngữ lập trình Python và Scala cũng như tìm hiểu sâu về các công cụ xử lý dữ liệu lớn phổ biến như Spark, Flink và tìm ra câu trả lời cho chính mình như sau:
 
+- Đầu tiên, khi các bạn biết thêm được ngôn ngữ Scala thì các bạn sẽ có nhiều cơ hội hơn để tham gia vào các dự án khác nhau; không phải bị phụ thuộc chỉ ngôn ngữ Python.
+- Thứ hai, khi bạn tham gia vào dự án mà ngôn ngữ được dùng là Scala thì bạn phải có kinh nghiệm về Scala thì mới có thể tiếp tục maintain cũng như đóng góp phát triển dự án trong tương lai.
+- Và thứ ba, tại sao có những dự án lại chọn Scala làm ngôn ngữ để phát triển, chứ không phải Python? Nguyên nhân là do đặc thù của ngôn ngữ Python sẽ không thật sự tối ưu về performance khi xử lý các bài toán với lượng dữ liệu lớn (chi tiết tại sao mình sẽ làm một bài phân tích sau nhé), và thứ 2 là vì công nghệ và dự án này chọn là gì, ví dụ Spark. Thì Spark có thể sử dụng bởi Python và cả Scala nhưng với Scala thì thời gian xử lý sẽ nhanh hơn, nhất là khi sử dụng User Defined Functions(UDF). Nói chung là sử dụng Scala vì quan tâm đến hiệu năng xử lý dữ liệu lớn hiệu quả hơn.
+
+### Nguồn tài liệu
+- [Trang tài liệu Scala](https://docs.scala-lang.org/): Các bạn có thể vào trang này để học về Scala nhé.
+- [Sách Functional Programming in Scala](https://learning.oreilly.com/library/view/functional-programming-in/9781617299582/): Bạn có thể tham khảo quyển sách này nhé.
+- [Sách Data Engineering with Scala and Spark](https://learning.oreilly.com/library/view/data-engineering-with/9781804612583/): Bạn có thể tham khảo quyển sách này để làm quen với sử dụng Scala cho Spark.
+- `Module 13: Scala cho Data Engineer` trong khoá học `Mastering Data Engineering 2024` do Tuân trực tiếp giảng dạy: Trong module này các bạn sẽ được học các kiến thức về lập trình bằng ngôn ngữ Scala cũng như sử dụng Scala để giải quyết các bài toán Data Engineering. Để đăng ký các bạn liên hệ [Facebook của Tuân](https://www.facebook.com/edgarle611/) nhé.
 
 
 ## Kết
-I hope this explanation was clear and easy to understand for you to follow through the process.
+Trên đây là lộ trình để trở thành Data Engineer cho các bạn từ chưa biết gì. Còn đối với các bạn đã có các kiến thức căn bản rồi, thì có thể dựa vào lộ trình trên để bổ sung những phần kiến thức mình còn thiếu nhé.
 
+Tuân hi vọng bài chia sẽ này sẽ giúp ích được các bạn trong việc hiểu rõ hơn về nghề Data Engineer cũng như biết được mình cần phải học gì để tiến tới level tiếp theo. 
+
+Và một điều xin lưu ý với những bạn đặt mục tiêu level Fresher/ Junior, để thành công trong các buổi phỏng vấn thì ngoài những phần Tuân liệt kê ở trên các bạn nên tập trung vào phần thuật toán cũng như rèn luyện kỹ năng giải quyết vấn đề nữa nhé.
+
+Và cuối cùng Tuân xin cảm ơn các bạn đã tin tưởng Tuân và dành thời gian để đọc hết các nội dung ở trên. Hy vọng các bạn sẽ thành công hơn, tiến đến level cao hơn trong tương lai nhé.
+
+Nếu các bạn thấy bài viết này của Tuân hữu ích, thì hãy giúp Tuân chia sẻ đến những bạn đang cần nó nhé.
