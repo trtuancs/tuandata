@@ -11,13 +11,13 @@ const { qrCodeSrc } = Astro.props as BuyMeACoffeeProps;
 ---
 
 <div class="rounded-3xl border-2 flex flex-col items-center">
-    <p class="text-xl font-posttitle text-center mb-0 ">Buy Me a Coffee</p>
+    <p class="text-xl font-posttitle text-center mb-0 m-2">Buy Me a Coffee</p>
     <Image
       src={qrCodeSrc}
       alt="profile photo"
       width="150"
       height="150"
-      class="w-55 h-65"
+      class="w-55 h-55 m-2"
       loading="eager"
     />
   </div>

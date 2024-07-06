@@ -6,10 +6,10 @@ updatedDate: 3 Jul 2024
 description: Chào mọi người, trong bài viết này Tuân sẽ chia sẻ đến mọi người về "Lộ trình học Data Engineering 2024", Tuân hi vọng bài viết này sẽ hữu ích với mọi người.
 tags: [data engineering]
 # draft: true
-# ogImage: /social-card.png
-# coverImage:
-#     src: "ssh.png"
-#     alt: "Config SSH file"
+ogImage: /delp2024.png
+coverImage:
+    src: "delp2024.png"
+    alt: "Data Engineering Learning Path 2024"
 #! TODO
 ---
 
@@ -25,7 +25,7 @@ Tuân hi vọng bài viết này sẽ hữu ích đến các bạn. Nếu các b
 Và bây giờ mình cùng nhau bắt đầu nào.
 
 ## 1. What is Data Engineering?
-![This is image about Data Engineering topic](dataengineering.png)
+![This is image about Data Engineering topic](de-intro.png)
 Đầu tiên và cũng là kiến thức quan trọng nhất khi các bạn tìm hiểu về Data Engineering hay nghề Data Engineer chính là hiểu về nghề, tìm hiểu về công việc của vị trí này là làm gì? Sự quan trọng của một Data Engineer trong một tổ chức? cũng như giá trị cốt lõi mà Data Engineer mang đến cho tổ chức.
 
 Để từ đó các bạn mới biết được rằng liệu mình có thích nó như mình nghĩ không? Liệu rằng mình có phù hợp với nó không? Tránh bị mất thời gian, công sức cũng như tiền bạc quá nhiều vào nó, rồi một ngày lại nhận ra là mình không phù hợp với nó, không thích công việc này. Vậy nên, tuy đây là những kiến thức đơn giản nhất nhưng cũng thật sự quan trọng nhất đối với bạn.
