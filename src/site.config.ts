@@ -35,6 +35,10 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 	{
 		title: 'Profile',
 		path: '/profile'
+	},
+	{
+		title: 'Social',
+		path: '/social'
 	}
 ]
 
