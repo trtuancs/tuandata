@@ -5,10 +5,11 @@ publishDate: 27 Jun 2024
 updatedDate: 27 Jun 2024
 description: Hello everyone, today I would like to share about "Tactics for reaching potential customers". I hope my following guide will be helpful to everyone.
 tags: [bussiness guide]
-# ogImage: /social-card.png
-# coverImage:
-#     src: "ssh.png"
-#     alt: "Config SSH file"
+# draft: true
+ogImage: /target.png
+coverImage:
+    src: "target.png"
+    alt: "Cover for post"
 #! TODO
 ---
 ## Introduction

@@ -6,10 +6,10 @@ updatedDate: 2 Jul 2024
 description: Chào mọi người, trong bài viết này Tuân sẽ chia sẻ cách kiểm tra ngày tạo của một khóa học trên Udemy để đánh giá độ mới của khóa học.
 tags: [udemy tip]
 # draft: true
-# ogImage: /social-card.png
-# coverImage:
-#     src: "ssh.png"
-#     alt: "Config SSH file"
+ogImage: /udemy.png
+coverImage:
+    src: "udemy.png"
+    alt: "Cover for post"
 #! TODO
 ---
 
