@@ -49,7 +49,10 @@ const { headings } = await post.render()
 					class='prose prose-base prose-zinc mt-12 text-lg dark:prose-invert prose-headings:font-medium prose-headings:text-foreground prose-headings:before:absolute prose-headings:before:-ms-4 prose-th:before:content-none'
 				>
 					<slot />
-					<BuyMeACoffee/>
+					<div class='pt-6'>
+						<BuyMeACoffee/>
+					</div>
+					
 				</div>
 			</article>
 		</div>
