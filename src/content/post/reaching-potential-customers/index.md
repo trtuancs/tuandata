@@ -17,7 +17,7 @@ Hello everyone, today I would like to share about "Tactics for reaching potentia
 I hope my following guide will be helpful to everyone.
 
 If there's anything below that you'd like me to explore further or hear more about,
-I'd love to know - please sent me a message at [my facebook](https://www.facebook.com/edgarle611/).
+I'd love to know - please sent me a message at [my facebook](https://www.facebook.com/TuanData98/).
 
 ## Tactics:
 Here are 10 tactics you could consider.
