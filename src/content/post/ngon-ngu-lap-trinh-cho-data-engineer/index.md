@@ -13,7 +13,7 @@ ogImage: /udemy.png
 ## Giới thiệu
 Chào mọi người, trong bài viết này Tuân sẽ cùng mọi người đi làm rõ __"Ngôn ngữ lập trình nào phù hợp cho Big Data Engineer?"__.
 
-Nếu như các bạn chưa biết, thì hiện tại hầu như các dự án xử lý __Big Data__ đều đang sử dụng một trong 3 ngôn ngữ lập trình chính như sau: __Java__, __Scala__ và __Python__.
+Nếu như các bạn chưa biết, thì hiện tại hầu như các dự án xử lý __Big Data__ đều đang sử dụng một trong 3 ngôn ngữ lập trình chính như sau: __Java__, __Scala__ và __Python__ (gần đây thì có thêm __Rust__, nhưng vì chưa phổ biến lắm nên Tuân sẽ không đề cập trong bài viết này nhé).
 
 Đầu tiên chúng ta sẽ cùng nhau đi tìm hiểu __"Tại sao 3 ngôn ngữ lập trình này lại được sử dụng trong lĩnh vực Big Data?"__
 
@@ -56,3 +56,43 @@ Ngôn ngữ lập trình __Scala__ ra đời nhằm khắc phục một vài nh�
 Những điều này cho phép __Scala__ tận dụng toàn bộ hệ sinh thái thư viện __Java__ phong phú và tương tác mượt mà với code __Java__ hiện có và cũng mang lại hiệu suất tương đương với ngôn ngữ lập trình __Java__.
 
 ## Chọn ngôn ngữ lập trình phù hợp cho dự án Big Data
+Như đã phân tích ở trên, có lẽ mọi người sẽ nghĩ __Scala__ luôn là phù hợp nhất cho các dự án Big Data hiện tại.
+
+Thật đúng như vậy, __Scala__ là ngôn ngữ thật sự mạnh mẽ về hiệu năng khi sử dụng để xử lý các luồng dữ liệu lớn. Nhưng mà để chọn một ngôn ngữ phù hợp cho một dự án Big Data bất kỳ thì ta còn phải xét các yếu tố khác như sau:
+
+- __Khối lượng dữ liệu xử lý của dự án__: __Java__ và __Scala__ thì sẽ tối ưu hơn __Python__ khi thực hiện các tác vụ tính toán phức tạp, nhưng vẫn có thể sử dụng Python khi các tác vụ tính toán không thật sự phức tạp.
+- __Tính chất dữ liệu__: __Java__ và __Scala__ sẽ tối ưu hơn __Python__ khi thực hiện xử lý dữ liệu theo thời gian thực (__real-time__).
+- __Công cụ xử lý Big Data__: Ví dụ khi bạn sử dụng Spark thì chắc chắn là Java và Scala cũng sẽ tối ưu hơn Python trong một vài trường hợp (như sử dụng UDF).
+- __Tốc độ xử lý__: __Java__ và __Scala__ sẽ là lựa chọn tốt hơn so với __Python__.
+- __Kỹ năng các member trong team__: Các member trong team quen thuộc cũng như có kinh nghiệm với ngôn ngữ nào hơn? yếu tố này chúng ta cũng cần nên xem xét.
+
+Phần lớn các yếu tố ở trên thì __Java__ và __Scala__ luôn chiếm ưu thế, vậy khi nào sẽ sử dụng __Java__ còn khi nào thì dùng __Scala__?
+
+- __Java__: Là ngôn ngữ phổ biến hơn __Scala__, cộng đồng cũng lớn hơn và cũng dễ học hơn. Nếu các member trong team quen với __Java__ hơn thì chúng ta nên sử dụng __Java__.
+
+- __Scala__: Sẽ phù hợp hơn khi mà các member trong team thật sự quen thuộc với __Scala__. Tuy hiệu năng của __Scala__ không thua kém gì __Java__ nhưng cộng đồng __Scala__ thì ít hơn và việc học cũng sẽ hơi khó học hơn. Nhưng mà nếu các bạn chịu khó, thì thật sự nên học Scala.
+
+Vậy còn __Python__ thì sao?
+
+Tuy hiệu năng của __Python__ thì không so được với __Java__ và __Scala__ nhưng bù lại __Python__ có những đặc tính nổi bật sau:
+- Dễ học, dễ đọc, cú pháp đơn giản.
+- Cộng đồng lớn, nhiều thư viện hỗ trợ mạnh mẽ cho việc xử lý dữ liệu lớn.
+- Tính linh hoạt cao, làm được nhiều việc trong các quy trình khai thác dữ liệu.
+
+Các đặc tính nổi bật trên làm cho __Python__ phù hợp cho các dự án __Big Data__ không yêu cầu nhiều về mặt hiệu năng cũng như tốc độ xử lý dữ liệu, nhưng lại yêu cầu tốc độ triển khai và hoàn thành dự án một cách hiệu quả và nhanh chóng, cũng như việc dễ maintain và phát triển sau này.
+
+Vì đơn giản, code __Python__ vẫn dễ hơn 2 ông thần __Scala__ và __Java__.
+
+## Ngôn ngữ lập trình phù hợp cho Big Data Engineer
+Nếu các bạn đã đọc đến đây, thì cũng phần nào chọn được ngôn ngữ lập trình phù hợp cho định hướng phát triển công việc của bản thân rồi đúng không?
+
+- Nếu các bạn mới tìm hiểu về __Data Engineer__, thì nên học __Python__. Vì để đảm bảo bạn có thể tìm được một nơi để phát triển sự nghiệp của mình đã.
+
+- Nếu các bạn đã có kinh nghiệm __Python__ cũng như nắm vững ngôn ngữ này, thì ngôn ngữ tiếp theo các bạn nên tìm hiểu là __Scala__ hoặc __Java__ các bạn nhé. Vì nhiều dự án lớn thì luôn cần __Scala__ hoặc __Java__.
+
+## Lời kết
+Trên đây là bài phân tích từ góc nhìn cá nhân của Tuân về 3 ngôn ngữ lập trình __Java__, __Scala__ và __Python__ trong lĩnh vực __Data Engineer__. Tuân hi vọng có thể giúp mọi người hiểu hơn về 3 ngôn ngữ này, cũng như chọn được ngôn ngữ phù hợp cho mình trên từng chặng đường phát triển sự nghiệp trong lĩnh vực __Data Engineering__.
+
+Nếu các bạn thấy bài viết này hay và hữu ích thì hãy giúp Tuân chia sẻ nó đến những bạn cần nó nhé.
+
+Và cuối cùng Tuân xin chúc mọi người mỗi ngày đều phát triển hơn, học thêm nhiều điều mới về __Data Engineering__ nhé!
