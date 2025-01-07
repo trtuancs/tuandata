@@ -75,7 +75,7 @@ data = [
     (1076, '2024-09-16 10:00'),
 ]
 
-columns = ["transaction_id", "time_stamp"]
+columns = ["transaction_id", "created_at"]
 df = spark.createDataFrame(data, columns)
 ```
 
@@ -86,7 +86,7 @@ We use _month()_ and _year()_ functions to filter transaction for September 2024
 ```python title="detect_invalid_transactions.py"
 from pyspark.sql.functions import col, month, year
 
-df_december_2022 = df.filter((month(col('time_stamp')) == 9) & (year(col('time_stamp')) == 2024))
+df_september_2024 = df.filter((month(col('created_at')) == 9) & (year(col('created_at')) == 2024))
 ```
 
 ### 4. Identifying weekends
@@ -96,7 +96,7 @@ The _dayofweek()_ function help us detect weekends, where Saturday is day 7 and 
 ```python title="detect_invalid_transactions.py"
 from pyspark.sql.functions import dayofweek
 
-weekend_check = (dayofweek(col('time_stamp')).isin([1, 7]))
+weekend_check = (dayofweek(col('created_at')).isin([1, 7]))
 ```
 
 ### 5. Checking business hours
@@ -106,8 +106,8 @@ We use _hour()_ and _minute()_ functions to identify transactions outside of 09:
 ```python title="detect_invalid_transactions.py"
 from pyspark.sql.functions import hour, minute
 
-outside_business_hours = (hour(col('time_stamp')) < 9) | (hour(col('time_stamp')) > 16) | \
-                          ((hour(col('time_stamp')) == 16) & (minute(col('time_stamp')) > 0))
+outside_business_hours = (hour(col('created_at')) < 9) | (hour(col('created_at')) > 16) | \
+                          ((hour(col('created_at')) == 16) & (minute(col('created_at')) > 0))
 ```
 
 ### 6. Marking public holiday
@@ -117,7 +117,7 @@ Transactions on 2nd September are flagged using the _dayofmonth()_ function.
 ```python title="detect_invalid_transactions.py"
 from pyspark.sql.functions import dayofmonth
 
-public_holiday_check = (dayofmonth(col('time_stamp')) == 2)
+public_holiday_check = (dayofmonth(col('created_at')) == 2)
 ```
 
 ### 7. Combining conditions for invalid transactions
