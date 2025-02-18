@@ -18,7 +18,7 @@ const { as: Tag = 'div', post, withDesc = false } = Astro.props
 const postDate = post.data.updatedDate ?? post.data.publishDate
 const postTags:PostTagsProps['postTags'] = post.data.tags
 
-const { class: className, title, tools, ...props } = Astro.props
+// const { class: className, title, tools, ...props } = Astro.props
 ---
 
 <li class='flex flex-col rounded-xl border border-border py-5 px-3 gap-y-4 sm:gap-y-6'>
