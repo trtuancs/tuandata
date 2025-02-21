@@ -6,10 +6,10 @@ updatedDate: 20 Feb 2025
 description: Data Catalog là gì? Tìm hiểu cách Data Catalog giúp quản lý, tìm kiếm và bảo vệ dữ liệu hiệu quả, cùng các công cụ phổ biến nhất hiện nay! 🚀
 tags: [data engineering, data catalog]
 # draft: true
-ogImage: /delp2024.png
-# coverImage:
-#     src: "delp2024.png"
-#     alt: "Data Engineering Learning Path 2024"
+ogImage: /meta_imgs/data-catalog.png
+coverImage:
+    src: "data-catalog.png"
+    alt: "Hình minh hoạ Data Platform thiếu Data Catalog"
 #! TODO
 ---
 
@@ -104,3 +104,10 @@ OpenMetadata có thể là lựa chọn tốt nhất cho team Tuân lúc này, n
 
 👉 Dữ liệu không ngừng phát triển, cách chúng ta quản lý nó cũng phải linh hoạt và tiến hóa theo!
 Nếu bạn cũng đang gặp khó khăn trong việc quản lý dữ liệu, đã đến lúc thử nghiệm một Data Catalog để xem nó có thể giúp ích gì cho đội ngũ của bạn! 🚀
+
+### Tài liệu tham khảo
+> https://medium.com/@kywe665/data-catalog-comparisons-unity-catalog-vs-apache-polaris-vs-datahub-and-more-9eee382001bf
+
+> https://www.unitycatalog.io/blogs/data-catalog
+
+> https://www.alation.com/blog/what-is-a-data-catalog/
