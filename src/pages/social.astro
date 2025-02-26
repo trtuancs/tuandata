@@ -3,8 +3,13 @@ import PageLayout from '../layouts/BaseLayout.astro'
 import BuyMeACoffee from '@/components/BuyMeACoffee.astro'
 import SocialC from '@/components/SocialC.astro'
 
+
+const meta = {
+	description: 'Hãy kết nối với Tuân Data trên các nền tảng mạng xã hội để cập nhật kiến thức SQL, Python, Big Data.',
+	title: 'Kết Nối Với Tuân Data'
+}
 ---
-<PageLayout meta={{ title: 'Social' }}>
+<PageLayout meta={meta}>
 
     <div class='w-full flex flex-col md:grid md:grid-cols-4 md:gap-4'>
         <div class='md:col-span-3 flex justify-center'>

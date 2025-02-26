@@ -4,9 +4,14 @@ import Section from '../components/Section.astro'
 import Label from '../components/Label.astro'
 import { Image } from 'astro:assets'
 import avt from '../assets/avt.png'
+
+const meta = {
+	description: 'Tuân Data là trang web chia sẻ kiến thức Data Engineering, SQL, Python & Big Data.',
+	title: 'Tuân Data | Chia Sẻ Kiến Thức Data Engineering & Lập Trình'
+}
 ---
 
-<PageLayout meta={{ title: 'Home' }}>
+<PageLayout meta={meta}>
 	<div class='flex w-full flex-col gap-y-10'>
 		<section class='flex flex-col items-center gap-y-7'>
 			<Image
