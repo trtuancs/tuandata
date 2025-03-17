@@ -6,10 +6,10 @@ updatedDate: 11 Mar 2025
 description: Khám phá bộ công cụ Python hiện đại nhất năm 2025 giúp các lập trình viên Python làm việc hiệu quả, nhanh chóng và dễ dàng hơn 🚀
 tags: [python]
 # draft: true
-# ogImage: /meta_imgs/data-catalog.png
-# coverImage:
-#     src: "data-catalog.png"
-#     alt: "Hình minh hoạ Data Platform thiếu Data Catalog"
+ogImage: /meta_imgs/bo-cong-cu-lam-viec-voi-python-2025.png
+coverImage:
+    src: "bo-cong-cu-lam-viec-voi-python-2025.png"
+    alt: "Bộ công cụ làm việc với Python năm 2025"
 #! TODO
 ---
 Bạn có đang sử dụng các công cụ Python hiệu quả nhất trong năm 2025?  
