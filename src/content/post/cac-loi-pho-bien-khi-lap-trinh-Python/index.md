@@ -3,13 +3,13 @@ title: "Các lỗi phổ biến khi lập trình Python"
 author: Tuân Data
 publishDate: 23 Mar 2025
 updatedDate: 24 Mar 2025
-description: Tìm hiểu thư mục __pycache__ trong Python, lý do nó được tạo ra, cách hoạt động và có nên xóa nó không. Giải thích chi tiết giúp bạn hiểu rõ hơn về Python 🚀
+description: Tổng hợp những lỗi Python phổ biến liên quan đến thói quen lập trình như wildcard import, default list arg, so sánh None sai cách. Tránh để bug khó debug! 🚀
 tags: [python]
 # draft: true
-# ogImage: /meta_imgs/tim-hieu-pycache.png
-# coverImage:
-#     src: "tim-hieu-pycache.png"
-#     alt: "Tìm hiểu thư mục __pycache__ trong Python"
+ogImage: /meta_imgs/cac-loi-pho-bien-khi-lap-trinh-python.png
+coverImage:
+    src: "cac-loi-pho-bien-khi-lap-trinh-python.png"
+    alt: "Các lỗi phổ biến khi lập trình Python"
 #! TODO
 ---
 Chào các bạn, trong bài này Tuân sẽ chia sẻ đến các bạn các lỗi mà các lập trình viên Python thường mắc phải khi code các dự án Python.
@@ -80,7 +80,7 @@ def process(data=None):
 
 ## Sử dụng == None
 
-Những ngày đầu lập trình Tuân cũng mắc lỗi này, đơn giản vì còn mơ hồ giữa phép __is__ và __==__. Đối với các kiểu dữ liệu bình thường, các bạn sử dụng phép so sánh __== None__ sẽ không phát hiện ra sự khác biệt mấy, cũng như code chạy sẽ không lỗi. Nhưng khi sử dụng với _array_ của __numpy__ hoặc _dataframe_ của __pandas__ thì bạn sẽ nhận ra.
+🔹 Những ngày đầu lập trình Tuân cũng mắc lỗi này, đơn giản vì còn mơ hồ giữa phép __is__ và __==__. Đối với các kiểu dữ liệu bình thường, các bạn sử dụng phép so sánh __== None__ sẽ không phát hiện ra sự khác biệt mấy, cũng như code chạy sẽ không lỗi. Nhưng khi sử dụng với _array_ của __numpy__ hoặc _dataframe_ của __pandas__ thì bạn sẽ nhận ra.
 
 Chúng ta cùng tìm hiểu đoạn code sau nhé:
 ```python
@@ -98,9 +98,14 @@ Trong đoạn code trên, _if_ kiểm tra __None__ sẽ đi kiểm tra các ph�
 
 ## Phần kết
 
-💡 Tóm lại cả __\_\_pycache\_\___ là thư mục mà __Python__ sử dụng để lưu trữ các file _bytecode_, phục vụ cho tác vụ tiếp theo trong quá trình thực thi của __Python__.
+🔹 Các lỗi mà Tuân vừa chia sẻ không gây lỗi khi chạy chương trình, nhưng lại là những _"cạm bẫy"_ nguy hiểm ảnh hưởng đến chất lượng code, khả năng bảo trì, và hiệu suất phát triển dự án.
+
+🎯 Dưới đây là 3 điểm bạn cần ghi nhớ:
+- Tránh dùng from module import *, hãy import rõ ràng và cụ thể.
+- Không dùng giá trị mặc định là list, dict, thay vào đó hãy dùng None.
+- Luôn dùng is None thay vì == None để đảm bảo so sánh đúng cách với đối tượng None.
+
+👉 Dù bạn là người mới học Python hay đã có kinh nghiệm, việc nhận ra và thay đổi những thói quen nhỏ này sẽ giúp bạn viết code sạch hơn, dễ đọc hơn, và "Pythonic" hơn trong mắt đồng nghiệp và cộng đồng.
 
 ### 🔗 Tài liệu tham khảo
 - https://www.reddit.com/r/learnpython/comments/8zej2c/eli5_what_are_wildcard_imports_and_why_should_i/
-- https://realpython.com/python-pycache/
-- https://www.geeksforgeeks.org/python-virtual-machine/
