@@ -1,0 +1,255 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import Button from './Button.astro'
+
+interface Props {
+	allPosts: CollectionEntry<'post'>[]
+	uniqueTags: string[]
+}
+
+const { allPosts, uniqueTags } = Astro.props
+
+// Prepare posts data for client-side search
+const postsData = allPosts.map((post) => ({
+	slug: post.slug,
+	title: post.data.title,
+	description: post.data.description,
+	tags: post.data.tags,
+	publishDate: post.data.publishDate.toISOString(),
+	updatedDate: post.data.updatedDate?.toISOString() || null
+}))
+---
+
+<div class='relative w-full'>
+	<div class='relative'>
+		<svg
+			xmlns='http://www.w3.org/2000/svg'
+			class='absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground'
+			fill='none'
+			viewBox='0 0 24 24'
+			stroke='currentColor'
+			stroke-width='2'
+		>
+			<circle cx='11' cy='11' r='8'></circle>
+			<path d='m21 21-4.35-4.35'></path>
+		</svg>
+		<input
+			type='text'
+			id='search-input'
+			placeholder='Tìm kiếm bài viết ...'
+			class='w-full rounded-lg border border-border bg-card py-3 pl-10 pr-4 text-base text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary'
+		/>
+	</div>
+</div>
+
+<!-- Hidden data for client-side search -->
+<script type='application/json' id='all-posts-data' is:inline set:html={JSON.stringify(postsData)} />
+
+<!-- Search results container -->
+<div id='search-results-container' class='hidden'>
+	<div class='my-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-between'>
+		<p class='text-center text-sm text-muted-foreground sm:text-left'>
+			<span id='search-results-count'>0</span> kết quả tìm kiếm cho "<span id='search-query'></span>"
+		</p>
+		<button
+			id='clear-search'
+			class='inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium transition-all hover:border-foreground/25 hover:bg-accent'
+		>
+			Xóa tìm kiếm
+		</button>
+	</div>
+
+	<div class='grid gap-y-16 sm:grid-cols-[3fr_1fr] sm:gap-x-8'>
+		<section>
+			<ul id='search-results-list' class='flex flex-col gap-y-4 text-start'></ul>
+		</section>
+
+		{!!uniqueTags.length && (
+			<aside>
+				<h2 class='mb-4 flex items-center text-lg font-posttitle'>
+					<svg
+						aria-hidden='true'
+						class='h-6 w-6'
+						fill='none'
+						stroke='currentColor'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+						stroke-width='1.5'
+						viewBox='0 0 24 24'
+						xmlns='http://www.w3.org/2000/svg'
+					>
+						<path d='M0 0h24v24H0z' fill='none' stroke='none' />
+						<path d='M7.859 6h-2.834a2.025 2.025 0 0 0 -2.025 2.025v2.834c0 .537 .213 1.052 .593 1.432l6.116 6.116a2.025 2.025 0 0 0 2.864 0l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-6.117 -6.116a2.025 2.025 0 0 0 -1.431 -.593z' />
+						<path d='M17.573 18.407l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-7.117 -7.116' />
+						<path d='M6 9h-.01' />
+					</svg>
+					Tags
+				</h2>
+				<ul class='text-bgColor flex flex-wrap gap-2'>
+					{uniqueTags.map((tag) => (
+						<li>
+							<Button title={tag} href={`/tags/${tag}/`} style='pill' />
+						</li>
+					))}
+				</ul>
+				<span class='mt-4 block sm:text-end'>
+					<a aria-label='View all blog categories' class='text-base' href='/tags/' data-astro-prefetch>
+						View all →
+					</a>
+				</span>
+			</aside>
+		)}
+	</div>
+</div>
+
+<script>
+	interface Post {
+		slug: string
+		title: string
+		description: string
+		tags: string[]
+		publishDate: string
+		updatedDate: string | null
+	}
+
+	function initSearch() {
+		const searchInput = document.getElementById('search-input') as HTMLInputElement
+		const postsDataEl = document.getElementById('all-posts-data')
+		const originalPostsSection = document.querySelector('[aria-label="Blog posts list"]')?.parentElement
+		const searchResultsContainer = document.getElementById('search-results-container')
+		const searchResultsList = document.getElementById('search-results-list')
+		const searchResultsCount = document.getElementById('search-results-count')
+		const searchQueryEl = document.getElementById('search-query')
+		const clearSearchBtn = document.getElementById('clear-search')
+
+		if (!searchInput || !postsDataEl || !originalPostsSection || !searchResultsContainer || !searchResultsList) return
+
+		const allPosts: Post[] = JSON.parse(postsDataEl.textContent || '[]')
+
+		const formatDate = (dateStr: string) => {
+			const date = new Date(dateStr)
+			return date.toLocaleDateString('vi-VN', {
+				day: 'numeric',
+				month: 'long',
+				year: 'numeric'
+			})
+		}
+
+		const renderSearchResults = (results: Post[]) => {
+			searchResultsList.innerHTML = results
+				.map(
+					(post) => `
+				<li class='flex flex-col rounded-xl border border-border py-5 px-3 gap-y-4 sm:gap-y-6'>
+					<div>
+						<time class='min-w-[120px] text-sm text-muted-foreground' datetime='${post.publishDate}'>
+							${formatDate(post.updatedDate || post.publishDate)}
+						</time>
+						<div>
+							<a
+								data-astro-prefetch
+								href='/blog/${post.slug}/'
+								class='transition-all hover:text-muted-foreground text-xl font-posttitle'
+							>
+								${post.title}
+							</a>
+							<p>
+								<svg
+									aria-hidden='true'
+									class='me-1 inline-block h-6 w-6'
+									fill='none'
+									focusable='false'
+									stroke='currentColor'
+									stroke-linecap='round'
+									stroke-linejoin='round'
+									stroke-width='1.5'
+									viewBox='0 0 24 24'
+									xmlns='http://www.w3.org/2000/svg'
+								>
+									<path d='M0 0h24v24H0z' fill='none' stroke='none' />
+									<path d='M7.859 6h-2.834a2.025 2.025 0 0 0 -2.025 2.025v2.834c0 .537 .213 1.052 .593 1.432l6.116 6.116a2.025 2.025 0 0 0 2.864 0l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-6.117 -6.116a2.025 2.025 0 0 0 -1.431 -.593z' />
+									<path d='M17.573 18.407l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-7.117 -7.116' />
+									<path d='M6 9h-.01' />
+								</svg>
+								${post.tags.map((tag, i) => `
+									<span>
+										<a
+											aria-label='View more blogs with the tag ${tag}'
+											class="inline-block before:content-['#'] hover:underline hover:underline-offset-4 text-base"
+											data-pagefind-filter='tag'
+											href='/tags/${tag}/'
+										>
+											${tag}
+										</a>
+										${i < post.tags.length - 1 ? ', ' : ''}
+									</span>
+								`).join('')}
+							</p>
+							<p class='line-clamp-3 block text-base text-muted-foreground'>
+								${post.description}
+							</p>
+						</div>
+					</div>
+				</li>
+			`
+				)
+				.join('')
+		}
+
+		const performSearch = (searchTerm: string) => {
+			if (!searchTerm) {
+				// Show original posts grid
+				if (originalPostsSection) (originalPostsSection as HTMLElement).style.display = ''
+				searchResultsContainer.classList.add('hidden')
+				return
+			}
+
+			// Filter posts
+			const results = allPosts.filter((post) => {
+				const searchLower = searchTerm.toLowerCase()
+				return (
+					post.title.toLowerCase().includes(searchLower) ||
+					post.description.toLowerCase().includes(searchLower) ||
+					post.tags.some((tag) => tag.toLowerCase().includes(searchLower))
+				)
+			})
+
+			// Hide original posts grid and show search results
+			if (originalPostsSection) (originalPostsSection as HTMLElement).style.display = 'none'
+			searchResultsContainer.classList.remove('hidden')
+
+			if (searchResultsCount) searchResultsCount.textContent = results.length.toString()
+			if (searchQueryEl) searchQueryEl.textContent = searchTerm
+
+			if (results.length > 0) {
+				renderSearchResults(results)
+			} else {
+				searchResultsList.innerHTML = `
+					<p class='text-muted-foreground py-8 text-center'>
+						Không tìm thấy bài viết nào phù hợp.
+					</p>
+				`
+			}
+		}
+
+		// Search on Enter key
+		searchInput.addEventListener('keydown', (e) => {
+			if (e.key === 'Enter') {
+				e.preventDefault()
+				const searchTerm = searchInput.value.trim()
+				performSearch(searchTerm)
+			}
+		})
+
+		// Clear search
+		clearSearchBtn?.addEventListener('click', () => {
+			searchInput.value = ''
+			performSearch('')
+		})
+	}
+
+	// Initialize on page load
+	initSearch()
+
+	// Re-initialize after page transitions
+	document.addEventListener('astro:page-load', initSearch)
+</script>

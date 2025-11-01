@@ -7,6 +7,7 @@ import type { CollectionEntry } from 'astro:content'
 import Button from '@/components/Button.astro'
 import Pagination from '@/components/Paginator.astro'
 import PostPreview from '@/components/blog/PostPreview.astro'
+import Search from '@/components/Search.astro'
 import PageLayout from '@/layouts/BaseLayout.astro'
 import { getAllPosts, getUniqueTags, sortMDByDate } from '@/utils'
 
@@ -14,15 +15,16 @@ export const getStaticPaths = (async ({ paginate }) => {
 	const allPosts = await getAllPosts()
 	const allPostsByDate = sortMDByDate(allPosts)
 	const uniqueTags = getUniqueTags(allPosts)
-	return paginate(allPostsByDate, { pageSize: 10, props: { uniqueTags } })
+	return paginate(allPostsByDate, { pageSize: 10, props: { uniqueTags, allPosts: allPostsByDate } })
 }) satisfies GetStaticPaths
 
 interface Props {
 	page: Page<CollectionEntry<'post'>>
 	uniqueTags: string[]
+	allPosts: CollectionEntry<'post'>[]
 }
 
-const { page, uniqueTags } = Astro.props
+const { page, uniqueTags, allPosts } = Astro.props
 
 const meta = {
 	description: 'Blog Tuân Data – Chia sẻ kiến thức Data Engineering, Python, SQL, Big Data. Cập nhật bài viết mới nhất về công nghệ dữ liệu và lập trình!',
@@ -30,6 +32,9 @@ const meta = {
 }
 
 const paginationProps = {
+	currentPage: page.currentPage,
+	lastPage: page.lastPage,
+	baseUrl: '/blog/',
 	...(page.url.prev && {
 		prevUrl: {
 			text: `← Previous Posts`,
@@ -47,23 +52,12 @@ const paginationProps = {
 
 <PageLayout meta={meta}>
 	<div class='w-full'>
-		<Button title='Back to Home' href='/' style='button'>
-			<svg
-				xmlns='http://www.w3.org/2000/svg'
-				width='14'
-				height='14'
-				viewBox='0 0 24 24'
-				slot='icon-before'
-			>
-				<path
-					fill='currentColor'
-					d='m6.921 12.5l5.792 5.792L12 19l-7-7l7-7l.713.708L6.921 11.5H19v1z'
-				>
-				</path>
-			</svg>
-		</Button>
+		<h1 class='mb-6 text-3xl font-posttitle'>Bài viết của Tuân</h1>
 
-		<h1 class='mb-6 mt-5 text-3xl font-posttitle'>Welcome to my blog</h1>
+		<div class='mb-8'>
+			<Search allPosts={allPosts} uniqueTags={uniqueTags} />
+		</div>
+
 		{page.data.length === 0 && <p>No posts yet.</p>}
 
 		{

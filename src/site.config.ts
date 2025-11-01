@@ -17,7 +17,7 @@ export const siteConfig: SiteConfig = {
 		locale: 'vi-VN',
 		options: {
 			day: 'numeric',
-			month: 'short',
+			month: 'long',
 			year: 'numeric'
 		}
 	}

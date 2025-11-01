@@ -1,5 +1,3 @@
-import { fontFamily } from 'tailwindcss/defaultTheme'
-
 /** @type {import('tailwindcss').Config} */
 const config = {
 	darkMode: ['class'],
@@ -67,9 +65,9 @@ const config = {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				sans: [...fontFamily.sans],
-				satoshi: ['Satoshi', 'sans'],
-				posttitle: ['PostTitle', 'sans'],
+				sans: ['Comfortaa', 'sans-serif'],
+				satoshi: ['Comfortaa', 'sans-serif'],
+				posttitle: ['Comfortaa', 'sans-serif'],
 			}
 		}
 	}

@@ -10,15 +10,17 @@ const {
 } = Astro.props
 ---
 
-<li class={`${depth > 2 ? 'ms-2' : ''}`}>
+<li class={`${depth > 2 ? 'ms-3' : ''}`}>
 	<a
 		aria-label={`Scroll to section: ${text}`}
-		class={`block line-clamp-2  ${depth <= 2 ? 'mt-2' : 'mt-1 text-base'} text-foreground/75 transition-all hover:text-foreground`}
-		href={`#${slug}`}>{text}</a
+		class={`block line-clamp-2 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground ${depth > 2 ? 'pl-2' : ''}`}
+		href={`#${slug}`}
 	>
+		{text}
+	</a>
 	{
 		!!subheadings.length && (
-			<ul>
+			<ul class='flex flex-col'>
 				{subheadings.map((subheading) => (
 					<Astro.self heading={subheading} />
 				))}
