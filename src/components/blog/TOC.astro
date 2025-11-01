@@ -27,40 +27,55 @@ const toc = generateToc(headings)
 
 <script>
 	function initTOC() {
-		const tocLinks = document.querySelectorAll('#toc-nav a')
+		const tocNav = document.getElementById('toc-nav')
+		if (!tocNav) return
+
+		const tocLinks = Array.from(tocNav.querySelectorAll('a')) as HTMLAnchorElement[]
 		if (!tocLinks.length) return
 
-		// Get all headings with IDs
-		const headings = Array.from(document.querySelectorAll('article [id]')).filter(
-			(el) => el.tagName.match(/^H[2-4]$/)
-		) as HTMLElement[]
+		// Get all headings that have corresponding TOC links
+		const headingIds = tocLinks.map(link => {
+			const href = link.getAttribute('href')
+			return href ? href.substring(1) : null // Remove the '#'
+		}).filter(Boolean) as string[]
 
-		if (!headings.length) return
+		const headings = headingIds.map(id => document.getElementById(id)).filter(Boolean) as HTMLElement[]
+
+		if (!headings.length) {
+			console.warn('No headings found for TOC')
+			return
+		}
 
 		let activeLink: HTMLAnchorElement | null = null
+		let ticking = false
 
 		const setActiveLink = (link: HTMLAnchorElement) => {
-			// Remove active class from all links
+			if (activeLink === link) return
+
+			// Remove active styling from all links
 			tocLinks.forEach((l) => {
 				l.classList.remove('active-toc-link')
+				l.style.color = ''
+				l.style.fontWeight = ''
 			})
-			// Add active class to current link
+			// Add active styling to current link
 			link.classList.add('active-toc-link')
+			link.style.color = 'hsl(var(--primary))'
+			link.style.fontWeight = '700'
 			activeLink = link
 		}
 
 		const updateActiveLink = () => {
-			const scrollY = window.scrollY
+			const scrollY = window.scrollY + 150 // Add offset for better UX
 
 			// Find the current heading in view
 			let currentHeading: HTMLElement | null = null
 
 			for (let i = headings.length - 1; i >= 0; i--) {
 				const heading = headings[i]
-				const rect = heading.getBoundingClientRect()
-				const absoluteTop = rect.top + scrollY
+				const top = heading.offsetTop
 
-				if (scrollY >= absoluteTop - 100) {
+				if (scrollY >= top) {
 					currentHeading = heading
 					break
 				}
@@ -69,25 +84,39 @@ const toc = generateToc(headings)
 			// If we found a heading, highlight its TOC link
 			if (currentHeading) {
 				const id = currentHeading.getAttribute('id')
-				const tocLink = document.querySelector(`#toc-nav a[href="#${id}"]`) as HTMLAnchorElement
-				if (tocLink && tocLink !== activeLink) {
+				const tocLink = tocLinks.find(link => link.getAttribute('href') === `#${id}`)
+				if (tocLink) {
 					setActiveLink(tocLink)
 				}
 			} else if (tocLinks[0]) {
 				// Default to first link if at top of page
-				setActiveLink(tocLinks[0] as HTMLAnchorElement)
+				setActiveLink(tocLinks[0])
+			}
+
+			ticking = false
+		}
+
+		// Debounced scroll handler
+		const onScroll = () => {
+			if (!ticking) {
+				window.requestAnimationFrame(updateActiveLink)
+				ticking = true
 			}
 		}
 
 		// Update on scroll
-		window.addEventListener('scroll', updateActiveLink, { passive: true })
+		window.addEventListener('scroll', onScroll, { passive: true })
 
-		// Set initial active link
-		updateActiveLink()
+		// Set initial active link after a short delay to ensure DOM is ready
+		setTimeout(updateActiveLink, 100)
 	}
 
 	// Initialize on page load
-	initTOC()
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initTOC)
+	} else {
+		initTOC()
+	}
 
 	// Re-initialize after page transitions
 	document.addEventListener('astro:page-load', initTOC)
@@ -96,11 +125,5 @@ const toc = generateToc(headings)
 <style>
 	#toc-nav a {
 		transition: all 0.2s ease;
-		font-weight: 400;
-	}
-
-	#toc-nav a.active-toc-link {
-		color: hsl(var(--primary)) !important;
-		font-weight: 700 !important;
 	}
 </style>
