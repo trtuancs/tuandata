@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content'
 
 import BlogHero from '@/components/blog/Hero.astro'
 import TOC from '@/components/blog/TOC.astro'
+import Giscus from '@/components/Giscus.astro'
 
 import PageLayout from './BaseLayout.astro'
 
@@ -36,10 +37,12 @@ const { headings } = await post.render()
 					<!-- <div class='pt-6'>
 						<BuyMeACoffee/>
 					</div> -->
-					
 				</div>
 			</article>
 		</div>
+
+		<!-- Comments Section - Full Width Below Content -->
+		<Giscus />
 
 		<button
 			aria-label='Back to Top'

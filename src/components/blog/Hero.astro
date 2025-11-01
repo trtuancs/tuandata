@@ -35,7 +35,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 <div class='flex flex-wrap items-center gap-x-3 gap-y-2'>
 	<p class='text-base'>
 		<FormattedDate date={data.publishDate} dateTimeOptions={dateTimeOptions} /> /{' '}
-		{remarkPluginFrontmatter.minutesRead}
+		{remarkPluginFrontmatter.minutesRead.replace('min read', 'phút đọc')}
 	</p>
 </div>
 <h1 class='mt-2 text-3xl font-posttitle sm:mb-1'>

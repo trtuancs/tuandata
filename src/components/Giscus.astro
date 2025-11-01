@@ -1,0 +1,129 @@
+---
+// Giscus Comments Component
+// Requires GitHub Discussions to be enabled on the repository
+interface Props {
+	repo?: string;
+	repoId?: string;
+	category?: string;
+	categoryId?: string;
+	mapping?: 'pathname' | 'url' | 'title' | 'og:title' | 'specific' | 'number';
+	reactionsEnabled?: '0' | '1';
+	emitMetadata?: '0' | '1';
+	inputPosition?: 'top' | 'bottom';
+	lang?: string;
+	loading?: 'lazy' | 'eager';
+}
+
+const {
+	repo = 'trtuancs/tuandata',
+	repoId = 'R_kgDOML6u2w',
+	category = 'General',
+	categoryId = 'DIC_kwDOML6u284CxVVQ',
+	mapping = 'pathname',
+	reactionsEnabled = '1',
+	emitMetadata = '0',
+	inputPosition = 'bottom',
+	lang = 'vi',
+	loading = 'lazy'
+} = Astro.props;
+---
+
+<div class="giscus-wrapper mt-12 pt-8 border-t border-border" id="giscus-container">
+	<script
+		src="https://giscus.app/client.js"
+		data-repo={repo}
+		data-repo-id={repoId}
+		data-category={category}
+		data-category-id={categoryId}
+		data-mapping={mapping}
+		data-strict="0"
+		data-reactions-enabled={reactionsEnabled}
+		data-emit-metadata={emitMetadata}
+		data-input-position={inputPosition}
+		data-theme="light"
+		data-lang={lang}
+		data-loading={loading}
+		crossorigin="anonymous"
+		async>
+	</script>
+</div>
+
+<script>
+	// Function to get current theme
+	function getGiscusTheme() {
+		const isDark = document.documentElement.classList.contains('dark');
+		return isDark ? 'transparent_dark' : 'light';
+	}
+
+	// Function to send theme change message to Giscus iframe
+	function sendThemeMessage(theme: string) {
+		const iframe = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame');
+		if (!iframe) return;
+
+		iframe.contentWindow?.postMessage(
+			{ giscus: { setConfig: { theme } } },
+			'https://giscus.app'
+		);
+	}
+
+	// Set initial theme when Giscus loads
+	function initGiscusTheme() {
+		const theme = getGiscusTheme();
+		sendThemeMessage(theme);
+	}
+
+	// Wait for Giscus iframe to load
+	const observer = new MutationObserver(() => {
+		const iframe = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame');
+		if (iframe) {
+			// Wait a bit for iframe to be ready
+			setTimeout(() => {
+				initGiscusTheme();
+			}, 100);
+			observer.disconnect();
+		}
+	});
+
+	// Start observing for Giscus iframe
+	const container = document.getElementById('giscus-container');
+	if (container) {
+		observer.observe(container, {
+			childList: true,
+			subtree: true
+		});
+	}
+
+	// Listen for theme changes from ThemeProvider
+	document.addEventListener('theme-change', () => {
+		const theme = getGiscusTheme();
+		sendThemeMessage(theme);
+	});
+
+	// Listen for manual dark class toggle
+	const themeObserver = new MutationObserver((mutations) => {
+		mutations.forEach((mutation) => {
+			if (mutation.attributeName === 'class') {
+				const theme = getGiscusTheme();
+				sendThemeMessage(theme);
+			}
+		});
+	});
+
+	themeObserver.observe(document.documentElement, {
+		attributes: true,
+		attributeFilter: ['class']
+	});
+
+	// Handle Astro view transitions
+	document.addEventListener('astro:after-swap', () => {
+		setTimeout(() => {
+			initGiscusTheme();
+		}, 100);
+	});
+</script>
+
+<style>
+	.giscus-wrapper {
+		max-width: 100%;
+	}
+</style>
