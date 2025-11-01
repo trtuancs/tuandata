@@ -65,9 +65,36 @@ const config = {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				sans: ['Comfortaa', 'sans-serif'],
-				satoshi: ['Comfortaa', 'sans-serif'],
-				posttitle: ['Comfortaa', 'sans-serif'],
+				sans: [
+					'-apple-system',
+					'BlinkMacSystemFont',
+					'"Segoe UI"',
+					'Roboto',
+					'"Helvetica Neue"',
+					'Arial',
+					'sans-serif',
+					'"Apple Color Emoji"',
+					'"Segoe UI Emoji"',
+					'"Segoe UI Symbol"'
+				],
+				satoshi: [
+					'-apple-system',
+					'BlinkMacSystemFont',
+					'"Segoe UI"',
+					'Roboto',
+					'"Helvetica Neue"',
+					'Arial',
+					'sans-serif'
+				],
+				posttitle: [
+					'-apple-system',
+					'BlinkMacSystemFont',
+					'"Segoe UI"',
+					'Roboto',
+					'"Helvetica Neue"',
+					'Arial',
+					'sans-serif'
+				],
 			}
 		}
 	}

@@ -41,7 +41,7 @@ Posts are processed with custom remark/rehype plugins:
   - Code syntax highlighting uses 'solarized-light' theme
 
 - `tailwind.config.js` - Tailwind configuration with custom color system using HSL CSS variables
-  - Uses Comfortaa font family throughout
+  - Uses native system fonts for optimal performance and native appearance
   - Custom breakpoints: tablet (640px), laptop (1024px), desktop (1280px)
   - Includes typography and aspect-ratio plugins
 
@@ -81,7 +81,7 @@ Located in `src/utils/`:
 
 ### Styling Approach
 
-The site uses a custom HSL-based color system defined in CSS variables. Tailwind is configured to use these variables rather than default colors. Custom fonts (Comfortaa family) are loaded from `public/fonts/`.
+The site uses a custom HSL-based color system defined in CSS variables. Tailwind is configured to use these variables rather than default colors. The site uses native system fonts (like San Francisco on macOS, Segoe UI on Windows, Roboto on Android) for faster loading and a native appearance on each platform.
 
 ## Important Notes
 
